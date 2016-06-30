@@ -1,8 +1,10 @@
-/node_modules
-/jspm_packages
-/bower_components
-/.idea
+/node_modules/
+/jspm_packages/
+/bower_components/
+/.idea/
+/dist/
+/typings/
+/.vscode/
+
 /.DS_STORE
-/dist
-/typings
-/.vscode
+/npm-debug.log

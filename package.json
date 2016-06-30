@@ -20,6 +20,10 @@
     "typings": "^1.3.0"
   },
   "jspm": {
+    "dependencies": {
+      "incremental-dom": "npm:incremental-dom@^0.4.1",
+      "webcomponents.js": "npm:webcomponents.js@^0.7.22"
+    },
     "devDependencies": {}
   }
 }

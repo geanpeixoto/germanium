@@ -34,7 +34,7 @@ module.exports = function(config) {
       ]
     },
     files: [
-      'test/*.ts'
+      'test/**/*.ts'
     ],
     exclude: [],
     preprocessors: { },
