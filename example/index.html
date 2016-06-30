@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="../jspm_packages/system.js"></script>
+    <script src="../jspm_packages/system-polyfills.js"></script>
+    <script src="../config.js"></script>
+    <script>
+        System.config({
+            defaultJSExtensions: false,
+            transpiler: 'typescript',
+            typescriptOptions: {
+                "module": "commonjs",
+                "emitDecoratorMetadata": true,
+                "experimentalDecorators": true,
+                "moduleResolution": "node"
+            },
+            paths: {
+                "github:*": "../jspm_packages/github/*",
+                "npm:*": "../jspm_packages/npm/*"
+            },
+            packages: {
+                '../src': {
+                    defaultExtension: 'ts'
+                },
+                '../example': {
+                    defaultExtension: 'ts'
+                }
+            }
+        });
+        System.import('index');
+    </script>
+</head>
+
+<body>
+    <x-item>
+        <h1>Title</h1>
+    </x-item>
+</body>
+
+</html>
