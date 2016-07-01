@@ -2,22 +2,25 @@
 <html>
 
 <head>
-    <script src="../jspm_packages/system.js"></script>
-    <script src="../jspm_packages/system-polyfills.js"></script>
-    <script src="../config.js"></script>
+    <script src='../jspm_packages/system.js'></script>
+    <script src='../jspm_packages/system-polyfills.js'></script>
+    <script src='../config.js'></script>
     <script>
         System.config({
             defaultJSExtensions: false,
             transpiler: 'typescript',
-            typescriptOptions: {
-                "module": "commonjs",
+            typescriptOptions : {
+                "module": "amd",
                 "emitDecoratorMetadata": true,
-                "experimentalDecorators": true,
-                "moduleResolution": "node"
+                "experimentalDecorators": true
             },
             paths: {
-                "github:*": "../jspm_packages/github/*",
-                "npm:*": "../jspm_packages/npm/*"
+                "os-browserify": "../jspm_packages/npm/os-browserify@0.1.2",
+                "os": "../jspm_packages/github/jspm/nodelibs-os@0.1.0",
+                "process": "../jspm_packages/npm/process@0.11.5",
+
+                'github:*': '../jspm_packages/github/*',
+                'npm:*': '../jspm_packages/npm/*'
             },
             packages: {
                 '../src': {
@@ -25,6 +28,9 @@
                 },
                 '../example': {
                     defaultExtension: 'ts'
+                },
+                '../jspm_packages': {
+                    defaultExtension: 'js'
                 }
             }
         });
@@ -34,7 +40,7 @@
 
 <body>
     <x-item>
-        <h1>Title</h1>
+       <a>asdsadasdasd</a>
     </x-item>
 </body>
 

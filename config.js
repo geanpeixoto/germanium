@@ -2,13 +2,14 @@ System.config({
   defaultJSExtensions: true,
   transpiler: false,
   paths: {
-    "*": "dist/*",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
 
   map: {
+    "es6-shim": "npm:es6-shim@0.35.1",
     "incremental-dom": "npm:incremental-dom@0.4.1",
+    "typescript": "npm:typescript@1.8.10",
     "webcomponents.js": "npm:webcomponents.js@0.7.22",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
@@ -60,6 +61,9 @@ System.config({
     "npm:core-util-is@1.0.2": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
+    "npm:es6-shim@0.35.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
@@ -91,6 +95,9 @@ System.config({
     },
     "npm:string_decoder@0.10.31": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
+    },
+    "npm:typescript@1.8.10": {
+      "os": "github:jspm/nodelibs-os@0.1.0"
     },
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",

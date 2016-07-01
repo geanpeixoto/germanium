@@ -3,9 +3,10 @@ import {patch} from 'incremental-dom';
 import {IRenderMethod, IComponent, IComponentConfig, IComponentDef, IComponentController} from '../interface/component';
 import {renderEngine} from './../service/render-engine';
 
-class Component extends HTMLElement implements IComponent {
+class ReactiveComponent extends HTMLElement implements IComponent {
     $$config: IComponentDef;
     $$controller: IComponentController;
+    shadowRoot: HTMLElement;
     
     createdCallback() {
         (<any>this).createShadowRoot();
@@ -14,11 +15,11 @@ class Component extends HTMLElement implements IComponent {
     }
 
     refresh() {
-        patch((<any>this).shadowRoot, () => this.$$config.render(this.$$controller));
+        patch(this.shadowRoot, () => this.$$config.render(this.$$controller));
     }
 }
 
-class ProactiveComponent extends Component {
+class ProactiveComponent extends ReactiveComponent {
     attachedCallback() {
         renderEngine.attach(this);
     }
@@ -29,7 +30,9 @@ class ProactiveComponent extends Component {
 }
 
 export function register(config: IComponentDef) {
-    let prototype: Component = Object.create(ProactiveComponent.prototype);
+    let parent = config.reactive ? ReactiveComponent.prototype : ProactiveComponent.prototype;
+    let prototype: ReactiveComponent = Object.create(parent);
+
     prototype.$$config = config;
     document.registerElement(config.tag, { prototype });
 }

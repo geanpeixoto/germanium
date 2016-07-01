@@ -38,4 +38,4 @@ function refreshComponent(component: IComponent) {
     component.refresh();
 }
 
-export var renderEngine: RenderEngine = new RenderEngine().start();
+export var renderEngine: RenderEngine = new RenderEngine();

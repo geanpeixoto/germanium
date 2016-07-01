@@ -10,7 +10,8 @@ export interface IComponentConfig {
     tag: string;
     template?: string;
     templateUrl?: string;
-    render?: any
+    render?: any;
+    reactive?: boolean;
 }
 
 export interface IComponentDef extends IComponentConfig {

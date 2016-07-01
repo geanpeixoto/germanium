@@ -8,6 +8,7 @@
   "devDependencies": {
     "es6-module-loader": "^0.17.11",
     "gulp": "^3.9.1",
+    "gulp-connect": "^4.1.0",
     "jasmine-core": "^2.4.1",
     "jspm": "^0.16.15",
     "karma": "^0.13.22",
@@ -21,7 +22,9 @@
   },
   "jspm": {
     "dependencies": {
+      "es6-shim": "npm:es6-shim@^0.35.1",
       "incremental-dom": "npm:incremental-dom@^0.4.1",
+      "typescript": "npm:typescript@^1.8.10",
       "webcomponents.js": "npm:webcomponents.js@^0.7.22"
     },
     "devDependencies": {}
