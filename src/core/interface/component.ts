@@ -8,7 +8,6 @@ export interface IComponentController {
 
 export interface IComponentConfig {
     tag: string;
-    template?: string;
     templateUrl?: string;
     render?: any;
     reactive?: boolean;

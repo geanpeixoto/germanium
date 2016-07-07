@@ -42,5 +42,19 @@ describe('helper/custom-element', () => {
         document.createElement('x-element-3');
     });
 
+    it('espera-se que, quando o templateUrl for declarado, o arquivo seja importado', (done) => {
+        register({
+            tag: 'x-element-4',
+            controller: class {
+                constructor(element: Element) {
+                    expect((<any>element).render).toBeDefined();
+                }
+            },
+            templateUrl: 'test/helper/render.mock.ts'
+        });
+
+        document.createElement('x-element-4');
+    });
+
   });
 });

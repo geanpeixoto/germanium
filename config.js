@@ -7,6 +7,7 @@ System.config({
   },
 
   map: {
+    "aurelia-http-client": "npm:aurelia-http-client@1.0.0-rc.1.0.0",
     "es6-shim": "npm:es6-shim@0.35.1",
     "incremental-dom": "npm:incremental-dom@0.4.1",
     "typescript": "npm:typescript@1.8.10",
@@ -49,6 +50,10 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "util": "npm:util@0.10.3"
+    },
+    "npm:aurelia-http-client@1.0.0-rc.1.0.0": {
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-rc.1.0.0",
+      "aurelia-path": "npm:aurelia-path@1.0.0-rc.1.0.0"
     },
     "npm:buffer@3.6.0": {
       "base64-js": "npm:base64-js@0.0.8",
